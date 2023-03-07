@@ -1,17 +1,15 @@
 import os
 from stable_baselines3 import PPO
-
-
 import pandas as pd
 
 from utils import data_split
 from env import Env
 
 #parameter values
-N = 4000000
+N = 4000000 # change according to your need
 
 #load data
-data = pd.read_csv('D:/Abdur/Anomaly_Detection/alldata_skab.csv') #dataset csv
+data = pd.read_csv('datasets/skab/alldata_skab.csv') #alldata_skab.csv is a combine csv file with all csv files in skab dataset
 data = data.drop(['datetime','changepoint'], axis=1)
 data = data.dropna()
 data = data.reset_index(drop=True)
@@ -26,7 +24,7 @@ model = PPO("MlpPolicy", train_env, verbose=1, tensorboard_log=log_path)
 model.learn(total_timesteps=N)
 
 obs = test_env.reset()
-n_steps = 20000 #it should be more than number of windows in test set
+n_steps = 200000 #it should be more than number of windows in test set
 rew = 0
 act = []
 for step in range(n_steps):
