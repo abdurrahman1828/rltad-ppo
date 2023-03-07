@@ -13,3 +13,25 @@ experiments on three publicly available datasets and two synthetic datasets demo
 methods in terms of precision, recall, and F1 score. In addition, the RLTAD framework’s interpretability is studied by employing the
 Gradient Class Activation Map (Grad-CAM).
 
+
+
+<img width="800" src="./imgs/rltad.png" alt="overview" />
+
+
+## Installation
+Make sure you have **python 3.8+** installed.
+```
+git clone https://github.com/abdurrahman1828/rltad-ppo.git
+cd rltad-ppo
+pip install -r requirments.txt
+pip install -e .
+```
+
+## Scripts
+Train and evaluate RLTAD with `main.py`. \
+RL environment is defined in `env.py`. \
+Required utility functions are in `utils.py`.
+
+## Dataset sources
+SKAB (Publicly available): [https://github.com/waico/SKAB](https://github.com/waico/SKAB) \
+SWaT & WADI (Available on request): [https://itrust.sutd.edu.sg/itrust-labs_datasets/dataset_info](https://itrust.sutd.edu.sg/itrust-labs_datasets/dataset_info/)
