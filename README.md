@@ -1,4 +1,4 @@
-## Learning from Fully-labeled to Unlabeled Multivariate Time Series: Proximal Policy Optimization-based Reinforcement Learning for Anomaly Detection
+## A Proximal Policy Optimization-based Reinforcement Learning Model for Multivariate Time Series Anomaly Detection
 
 ### Abstract
 Efficient anomaly detection in multivariate time series data is becoming increasingly important for modern industrial
